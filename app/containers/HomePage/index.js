@@ -29,19 +29,16 @@ import saga from './saga';
 
 import { loadStrings } from '../App/actions';
 
-const key = 'HomePage';
+const key = 'global';
 
-export function HomePage({ loading, error, strings, onSubmitForm }) {
-  console.log('homepage, strings', strings);
+export function HomePage({ loading, error, strings, onMount }) {
   useInjectReducer({ key, reducer });
   useInjectSaga({ key, saga });
 
   useEffect(() => {
     // load strings
-    console.log('useeffect', strings);
     if (strings === false) {
-      console.log('useffect if', strings);
-      onSubmitForm();
+      onMount();
     }
   }, []);
 
@@ -57,11 +54,11 @@ export function HomePage({ loading, error, strings, onSubmitForm }) {
         <h1>
           <FormattedMessage {...messages.header} />
         </h1>
-        <h2>Strings = {`'${strings}'`}</h2>
-        <StringsList {...stringsListProps} />
+        <h2>Strings = {strings.strings ? `'${strings.strings}'` : 'Empty'}</h2>
         <a href="/add">
           <button type="button">Add New String</button>
         </a>
+        <StringsList {...stringsListProps} />
       </CenteredSection>
     </Section>
   );
@@ -70,8 +67,8 @@ export function HomePage({ loading, error, strings, onSubmitForm }) {
 HomePage.propTypes = {
   loading: PropTypes.bool,
   error: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
-  strings: PropTypes.oneOfType([PropTypes.array, PropTypes.bool]),
-  onSubmitForm: PropTypes.func,
+  strings: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
+  onMount: PropTypes.func,
 };
 
 const mapStateToProps = createStructuredSelector({
@@ -82,8 +79,7 @@ const mapStateToProps = createStructuredSelector({
 
 export function mapDispatchToProps(dispatch) {
   return {
-    onSubmitForm: () => {
-      console.log(loadStrings);
+    onMount: () => {
       dispatch(loadStrings());
     },
   };

@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AddPage /> should render and match the snapshot 1`] = `
+<section
+  class="Section-sc-1td0dkz-0 gOHFWS"
+>
+  <section
+    class="Section-sc-1td0dkz-0 CenteredSection-sc-9ounr7-0 ewtOfN"
+  >
+    <form
+      class="Form-ye6mxs-0 eelZyG"
+    >
+      <h2>
+        New String Form
+      </h2>
+      <label>
+        New String:
+        <input
+          class="Input-sc-1qwpjmw-0 dzgcPp"
+          id="string"
+          name="string"
+          type="text"
+          value=""
+        />
+      </label>
+      <button
+        class="Button-sc-1e442dj-0 jqXTfo"
+        color="teal"
+        disabled=""
+        type="submit"
+      >
+        Add
+      </button>
+      <a
+        href="/"
+      >
+        <button
+          class="Button-sc-1e442dj-0 eaWiGN"
+          color="black"
+          type="button"
+        >
+          Back
+        </button>
+      </a>
+    </form>
+  </section>
+</section>
+`;

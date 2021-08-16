@@ -1,7 +1,7 @@
 /**
- * RepoListItem
+ * StringListItem
  *
- * Lists the name and the issue count of a repository
+ * Lists strings
  */
 
 import React from 'react';
@@ -21,5 +21,5 @@ export default function StringListItem(props) {
 }
 
 StringListItem.propTypes = {
-  item: PropTypes.array,
+  item: PropTypes.string,
 };

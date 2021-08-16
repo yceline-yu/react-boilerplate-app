@@ -1,9 +1,6 @@
 /*
- * HomeReducer
+ * AppReducer
  *
- * The reducer takes care of our data. Using actions, we can
- * update our application state. To add a new action,
- * add it to the switch statement in the reducer function
  *
  */
 
@@ -26,14 +23,12 @@ const appReducer = (state = initialState, action) =>
   produce(state, draft => {
     switch (action.type) {
       case LOAD_STRINGS:
-        console.log('load_strings reducer', state);
         draft.loading = true;
         draft.error = false;
         draft.strings = false;
         break;
 
       case LOAD_STRINGS_SUCCESS:
-        console.log('load_string_success reducer', state);
         draft.strings = action.strings;
         draft.loading = false;
         break;

@@ -19,7 +19,11 @@ function StringsList({ loading, error, strings }) {
   }
 
   if (strings !== false) {
-    return <List items={strings} component={StringListItem} />;
+    if (strings.strings.length === 0) {
+      const EmptyComponent = () => <ListItem item="The list is empty" />;
+      return <List component={EmptyComponent} />;
+    }
+    return <List items={strings.strings} component={StringListItem} />;
   }
 
   return null;

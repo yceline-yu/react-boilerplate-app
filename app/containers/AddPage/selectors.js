@@ -13,4 +13,16 @@ const makeSelectString = () =>
     addPageState => addPageState.string,
   );
 
-export { selectAdd, makeSelectString };
+const makeSubmitString = () =>
+  createSelector(
+    selectAdd,
+    addPageState => addPageState.submit,
+  );
+
+const makeError = () =>
+  createSelector(
+    selectAdd,
+    addPageState => addPageState.error,
+  );
+
+export { selectAdd, makeSelectString, makeSubmitString, makeError };

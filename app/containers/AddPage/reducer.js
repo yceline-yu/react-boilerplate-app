@@ -1,18 +1,16 @@
 /*
  * addPageReducer
  *
- * The reducer takes care of our data. Using actions, we can
- * update our application state. To add a new action,
- * add it to the switch statement in the reducer function
- *
  */
 
 import produce from 'immer';
-import { CHANGE_STRING } from './constants';
+import { CHANGE_STRING, SUBMIT_ERROR, SUBMIT_STRING } from './constants';
 
-// The initial state of the App
+// The initial state
 export const initialState = {
   string: '',
+  submit: false,
+  error: false,
 };
 
 /* eslint-disable default-case, no-param-reassign */
@@ -22,6 +20,11 @@ const addPageReducer = (state = initialState, action) =>
       case CHANGE_STRING:
         draft.string = action.string;
         break;
+      case SUBMIT_STRING:
+        draft.submit = action.submit;
+        break;
+      case SUBMIT_ERROR:
+        draft.error = action.error;
     }
   });
 
