@@ -51,7 +51,7 @@ exports[`<StringsList /> should render the loading indicator when its loading 1`
 </div>
 `;
 
-exports[`<StringsList /> should render the repositories if loading was successful 1`] = `
+exports[`<StringsList /> should render the strings if loading was successful 1`] = `
 <div
   class="Wrapper-sc-1umgotm-0 jjVzQg"
 >

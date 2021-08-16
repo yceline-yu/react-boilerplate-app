@@ -22,7 +22,7 @@ describe('<StringsList />', () => {
     expect(queryByText(/Something went wrong/)).not.toBeNull();
   });
 
-  it('should render the repositories if loading was successful', () => {
+  it('should render the strings if loading was successful', () => {
     const store = configureStore({}, browserHistory);
     const strings = { strings: ['test', 'test'] };
     const { container } = render(

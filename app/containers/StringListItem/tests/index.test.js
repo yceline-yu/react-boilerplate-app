@@ -1,5 +1,5 @@
 /**
- * Test the repo list item
+ * Test the string list item
  */
 
 import React from 'react';
