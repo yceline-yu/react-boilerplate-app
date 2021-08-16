@@ -35,7 +35,7 @@ describe('getStrings Saga', () => {
   });
 });
 
-describe('serverDataSaga Saga', () => {
+describe('serverData Saga', () => {
   const serverDataSaga = serverData();
 
   it('should start task to watch for LOAD_STRINGS action', () => {

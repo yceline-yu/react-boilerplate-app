@@ -78,21 +78,6 @@ describe('<AddPage />', () => {
         const result = mapDispatchToProps(dispatch);
         expect(result.onSubmitForm).toBeDefined();
       });
-
-      // it('should dispatch submitString when called', () => {
-      //   const dispatch = jest.fn();
-      //   const result = mapDispatchToProps(dispatch);
-      //   result.onSubmitForm();
-      //   expect(dispatch).toHaveBeenCalledWith(submitString());
-      // });
-
-      // it('should preventDefault if called with event', () => {
-      //   const preventDefault = jest.fn();
-      //   const result = mapDispatchToProps(() => {});
-      //   const evt = { preventDefault };
-      //   result.onSubmitForm(evt);
-      //   expect(preventDefault).toHaveBeenCalledWith();
-      // });
     });
   });
 });
