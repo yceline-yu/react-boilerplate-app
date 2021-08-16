@@ -5,6 +5,7 @@
 3.  Move to the appropriate directory.<br />
 4.  Run `npm install` in order to install dependencies.<br />
 5.  Run `npm start` to start app.
+6.  Run `npm test` to start the tests.
 
 ## Documentation
 
